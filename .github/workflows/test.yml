@@ -1,0 +1,16 @@
+name: Test
+on:
+  # Run tests for any PRs.
+  pull_request:
+jobs:
+  # Run tests.
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: install # will run `yarn install` command
+      - name: Run tests
+        run: |
+          npx htmlhint "src/*.html"
