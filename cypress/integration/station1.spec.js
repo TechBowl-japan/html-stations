@@ -1,4 +1,4 @@
-describe('todo list e2e', function () {
+describe('Station1', function () {
     beforeEach(() => {  // functionの前に必ず実行される
         // baseUrlのrootへ
         cy.visit('/station1.html');
@@ -12,7 +12,7 @@ describe('todo list e2e', function () {
             .should('have.attr', 'alt')
 
         cy.get('img')
-            .should('have.src', 'alt')
+            .should('have.attr', 'src')
     });
     it('Title Should Be P Tag', function () {
         cy.get('p')
