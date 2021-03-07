@@ -8,9 +8,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: borales/actions-yarn@v2.0.0
+      - uses: actions/setup-node@v2
         with:
-          cmd: install # will run `yarn install` command
-      - name: Run tests
+          node-version: '14'
+      - name: Install Dependecires
+        run: |
+          yarn install
+      - name: Run Linter Test
         run: |
           npx htmlhint "src/*.html"
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+        with:
+          start: yarn lite-server -c ./bs-config.json
+          spec: cypress/integration/*
