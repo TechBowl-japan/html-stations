@@ -20,6 +20,5 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v1
         with:
-          record: true
-          start: yarn lite-server -c bs-config.js
+          start: yarn lite-server -c bs-config.js 
           spec: cypress/integration/*
