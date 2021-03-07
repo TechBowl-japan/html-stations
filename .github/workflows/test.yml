@@ -20,5 +20,6 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v1
         with:
-          start: yarn lite-server -c bs-config.js 
+          start: yarn lite-server -c ./bs-config.json
+          wait-on: 'http://localhost:3000'
           spec: cypress/integration/*
