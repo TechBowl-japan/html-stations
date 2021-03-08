@@ -1,9 +1,9 @@
 name: Test
 on:
-  # Run tests for any PRs.
-  pull_request:
+  push:
+    branches:
+      - station1
 jobs:
-  # Run tests.
   test:
     runs-on: ubuntu-latest
     steps:
@@ -21,4 +21,4 @@ jobs:
         uses: cypress-io/github-action@v2
         with:
           start: yarn lite-server -c ./bs-config.json
-          spec: cypress/integration/*
+          spec: cypress/integration/station1.spec.js
