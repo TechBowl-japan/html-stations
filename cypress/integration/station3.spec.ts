@@ -5,7 +5,7 @@ import { compareColor } from '../utils/compareColor'
 
 // MEMO: station1と同様，クラス名はとりあえずBEMに従わせます (@3c1u)
 
-describe('Station1', () => {
+describe('Station3', () => {
   beforeEach(() => {
     cy.visit('/station3.html')
   })
