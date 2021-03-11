@@ -7,6 +7,10 @@
     "cypress": "^6.6.0",
     "htmlhint": "^0.14.2",
     "lite-server": "^2.6.1",
+    "typescript": "^4.2.3",
     "webpack-cli": "^4.5.0"
+  },
+  "scripts": {
+    "cypress:run": "cypress run --config video=false"
   }
 }
