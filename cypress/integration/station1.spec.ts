@@ -6,16 +6,16 @@ describe('Station1', function () {
   })
 
   // FIXME: 機能していない
-  it('has HTML Tags', function () {
+  it('`<html>`タグが存在する', function () {
     cy.get('html').should('be.visible')
   })
 
-  it('Image Should have `alt`,`src` props', function () {
+  it('`<img>`タグに`src`と`alt`属性がある', function () {
     cy.get('img').should('have.attr', 'alt')
     cy.get('img').should('have.attr', 'src', './assets/image/otya.jpg')
   })
 
-  it('Title Should Be P Tag with no class or id', function () {
+  it('タイトルは`<p>`タグで，`id`および`class`属性をもたない', function () {
     const titleTemplate = 'タイトル'
 
     cy.get('p').should(($p) => {
@@ -27,7 +27,7 @@ describe('Station1', function () {
   })
 
   // 一番目の<span>もしくは<p>の内容が`descriptionTemplate`と一致することをテストする
-  it('Description Should Be Either P or Span Tag with no class or id', function () {
+  it('タイトルは`<span>`または`<p>`タグで，`id`および`class`属性をもたない', function () {
     const descriptionTemplate = 'サブタイトル'
 
     cy.get('body')
