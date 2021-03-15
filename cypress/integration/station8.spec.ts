@@ -11,7 +11,7 @@ describe('Station8', () => {
   })
   
   //  コンテナが`display: flex`であること
-  it('The container of cards should be flexbox', () => {
+  it('`.card`の親要素がFlexboxである', () => {
     cy.get('.card').parent().should('have.css', 'display').should('eq', 'flex')
   })
 })

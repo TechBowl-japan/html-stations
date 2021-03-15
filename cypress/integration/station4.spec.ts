@@ -14,7 +14,7 @@ describe('Station4', function () {
     cy.visit('/station4.html')
   })
 
-  it('has a <header> tag with white background', function () {
+  it('`<header>`タグがあり，背景が白色である', function () {
     cy.get('header')
       .should('exist')
       .then((header) => {
@@ -23,7 +23,7 @@ describe('Station4', function () {
       })
   })
 
-  it('has a <footer> tag', function () {
+  it('`<footer>`タグがある', function () {
     cy.get('footer').should('exist')
   })
 })

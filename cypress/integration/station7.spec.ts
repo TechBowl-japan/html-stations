@@ -12,7 +12,7 @@ describe('Station7', function () {
     cy.visit('/station7.html')
   })
 
-  it('has multiple cards', function () {
+  it('`.card`が複数存在する', function () {
     cy.get('.card').then(card => {
       expect(card.length).to.be.gt(1)
     })

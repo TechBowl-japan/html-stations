@@ -11,7 +11,7 @@ describe('Station9', () => {
     cy.visit('/station9.html')
   })
 
-  it('Title text should be smaller on medium/small', () => {
+  it('タブレットおよびスマートフォンでタイトルの文字が小さく表示される', () => {
     let fontSize = 0
 
     cy.viewport(2000, 1000)
@@ -32,7 +32,7 @@ describe('Station9', () => {
     })
   })
 
-  it('Description text should be smaller on medium/small', () => {
+  it('タブレットで説明の文字が小さく表示される', () => {
     let fontSize = 0
 
     cy.viewport(2000, 1000)
@@ -53,7 +53,7 @@ describe('Station9', () => {
     })
   })
 
-  it('Description text should disappear on small', () => {
+  it('スマートフォンで説明の文字が非表示になる', () => {
     cy.viewport(2000, 1000)
     cy.get('.card__description').then((title) => {
       expect(title.css('display')).not.eq('none')

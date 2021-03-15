@@ -13,7 +13,7 @@ describe('Station2', function () {
   })
 
   // FIXME: 機能していない
-  it('has HTML Tags', function () {
+  it('`<html>`タグが存在する', function () {
     cy.get('html').should('be.visible')
   })
 })

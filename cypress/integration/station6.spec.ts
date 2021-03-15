@@ -22,7 +22,7 @@ describe('Station6', function () {
     cy.visit('/station6.html')
   })
 
-  it('has valid <meta> OGP tags', function () {
+  it('有効な`<meta>`OGPタグが存在する', function () {
     cy.get('meta[property]').should('exist').then(metaTags => {
       const visitor = new OgpVisitor()
       metaTags.each(function() {
@@ -46,7 +46,7 @@ describe('Station6', function () {
     })
   })
 
-  it('has valid Twitter <meta> tags', function () {
+  it('Twitter用の有効な`<meta>`タグが存在する', function () {
     cy.get('meta[name="twitter:card"]').should('exist').then(cardMeta => {
       const cardType = cardMeta.last().attr('content')
       expect(cardTypes.indexOf(cardType) !== -1, `Twitter card type should be one of : "${cardTypes.join('", "')}"`).to.be.true
