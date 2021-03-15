@@ -499,6 +499,14 @@ export class OgpVisitor {
       return right([[...this.warnings], { ...this.result, ...this.otherProps }])
     }
 
+    this.emitError({
+      type: 'incomplete',
+      metadata: 'og',
+      description: `incomplete OGP metadata; missing "${
+        ['title', 'type', 'image', 'url'].filter(n => !this.result[n]).join('", "')
+      }"`,
+    })
+
     return left([
       [...this.errors],
       [...this.warnings],

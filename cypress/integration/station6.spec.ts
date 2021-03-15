@@ -5,8 +5,15 @@
  * `<meta>`タグでOGPの設定をする．
  */
 
-import { isRight } from "fp-ts/lib/Either"
+import { isLeft, isRight } from "fp-ts/lib/Either"
 import { OgpVisitor } from "../utils/ogpValidator"
+
+const cardTypes = [
+  'summary',
+  'summary_large_image',
+  'app',
+  'player',
+]
 
 describe('Station6', function () {
   beforeEach(() => {
@@ -15,18 +22,41 @@ describe('Station6', function () {
     cy.visit('/station6.html')
   })
 
-  it('has valid <meta> tags', function () {
+  it('has valid <meta> OGP tags', function () {
     cy.get('meta[property]').should('exist').then(metaTags => {
       const visitor = new OgpVisitor()
-      metaTags.toArray().forEach(el => {
-        const property = el.getAttribute('property') ?? ''
-        const content = el.getAttribute('content') ?? ''
+      metaTags.each(function() {
+        const property = this.getAttribute('property') ?? ''
+        const content = this.getAttribute('content') ?? ''
         visitor.visitProperty(property, content)
       })
 
       const res = visitor.finalize()
-      cy.log(JSON.stringify(res))
+
+      if (isLeft(res)) {
+        const [errors, warnings, _] = res.left
+        cy.on('fail', (error, _) => {
+          error.name = 'ParseError'
+          error.message = 'parse failed due to error(s):\n' + errors.map(err => `(${err.type}) ${err.description ?? ''}`).join('\n')
+          throw error // throw error to have test still fail
+        })
+      }
+
       expect(isRight(res)).to.be.true
+    })
+  })
+
+  it('has valid Twitter <meta> tags', function () {
+    cy.get('meta[name="twitter:card"]').should('exist').then(cardMeta => {
+      const cardType = cardMeta.last().attr('content')
+      expect(cardTypes.indexOf(cardType) !== -1, `Twitter card type should be one of : "${cardTypes.join('", "')}"`).to.be.true
+    })
+
+    cy.get('meta[name="twitter:site"],meta[name="twitter:creator"]').then(cardMeta => {
+      cardMeta.each((_, el) => {
+        const twitterId = el.getAttribute('content')
+        expect(twitterId).satisfy((v) => /^@(\w){1,15}$/.test(v), 'the values of twitter:site and twitter:crator should be valid Twitter ID')
+      })
     })
   })
 })
