@@ -2601,6 +2601,11 @@ verror@1.10.0:
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
 
+wcag-color@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/wcag-color/-/wcag-color-1.1.1.tgz#a11454ac39dbfec41fa03fd7af5465728e99255f"
+  integrity sha512-KRez+YYOx7AGoQ6+Izu3YjNsISYAC+F/g0hJ+eNaaA8taeLbEkptkgA46SM9ioXxz/2KTjJpQqAhOwAQVwaTEQ==
+
 webpack-cli@^4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/webpack-cli/-/webpack-cli-4.5.0.tgz#b5213b84adf6e1f5de6391334c9fa53a48850466"
