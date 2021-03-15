@@ -1,3 +1,11 @@
+/**
+ * # 「レスポンシブ対応をしてみよう！」 - Responsive Design and Media Queries
+ * 
+ * ## 概要
+ * レスポンシブレイアウトに対応させる．
+ * medium/small画面でフォントサイズが小さくなれば良い．
+ */
+
 describe('Station9', () => {
   beforeEach(() => {
     cy.visit('/station9.html')

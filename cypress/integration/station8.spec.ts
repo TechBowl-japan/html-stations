@@ -1,5 +1,9 @@
-import { compareColor } from '../utils/compareColor'
-
+/**
+ * # 「FlexBoxを使ってレイアウトを作ろう！」 - Making Layouts
+ *
+ * ## 概要
+ * `.card`のコンテナをFlexboxにする．
+ */
 
 describe('Station8', () => {
   beforeEach(() => {

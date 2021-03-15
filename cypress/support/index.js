@@ -18,3 +18,7 @@ import './commands'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+Cypress.Commands.overwrite('log', (_subject, message) =>
+  cy.task('log', message)
+)
