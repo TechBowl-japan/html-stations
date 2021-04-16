@@ -58,6 +58,11 @@
   dependencies:
     any-observable "^0.3.0"
 
+"@techtrain/cli-railway@^0.1.0-alpha.1":
+  version "0.1.0-alpha.1"
+  resolved "https://registry.yarnpkg.com/@techtrain/cli-railway/-/cli-railway-0.1.0-alpha.1.tgz#e00920148559814089417a933f4e5ab2c5e5e558"
+  integrity sha512-/RNxja0fsGNPFk+h6t2yDDKtRpkxcvwhJsqYM3EVfSWR/hHZDnVIrSAuGKe3mMMaBctr5ZjLWVVwI490K2A/9A==
+
 "@types/node@12.12.50":
   version "12.12.50"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-12.12.50.tgz#e9b2e85fafc15f2a8aa8fdd41091b983da5fd6ee"
@@ -2271,6 +2276,11 @@ signal-exit@^3.0.2, signal-exit@^3.0.3:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.3.tgz#a1410c2edd8f077b08b4e253c8eacfcaf057461c"
   integrity sha512-VUJ49FC8U1OxwZLxIbTTrDvLnf/6TDgxZcK8wxR8zs13xpx7xbG60ndBlhNrFi2EMuFRoeDoJO7wthSLq42EjA==
+
+simple-git-hooks@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/simple-git-hooks/-/simple-git-hooks-2.3.1.tgz#cd400893fe7683d8cb07c357d20b3a2a9d75dd65"
+  integrity sha512-t1ZP5y6yGZmWjceOmTEr37g+TTot96DaAYYCnWOLu55squ/z60CiDV3Gdz2kEzmynEzgxyg4fCeJnsQWZdL4yg==
 
 slice-ansi@0.0.4:
   version "0.0.4"
