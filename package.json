@@ -17,7 +17,8 @@
   "scripts": {
     "cypress:run": "cypress run --config video=false",
     "login:techtrain": "techtrain-railway login",
-    "yarn hook:pre-commit": "techtrain-railway hook:pre-commit"
+    "hook:pre-commit": "techtrain-railway hook:pre-commit",
+    "hook:update": "simple-git-hooks"
   },
   "simple-git-hooks": {
     "pre-commit": "yarn hook:pre-commit"
