@@ -2,11 +2,7 @@
   "name": "Station 02",
   "id": 2,
   "prepare": [
-    "yarn install",
-    {
-      "command": "yarn lite-server",
-      "background": true
-    }
+    "yarn install"
   ],
   "tests": [
     {
