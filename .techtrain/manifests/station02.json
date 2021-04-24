@@ -10,8 +10,10 @@
   ],
   "tests": [
     {
-      "type": "cypress",
-      "specFile": "./cypress/integration/station2.spec.ts"
+      "type": "command",
+      "title": "Prettierのテストが通る",
+      "command": "yarn",
+      "args": ["station2:prettier"]
     }
   ]
 }
