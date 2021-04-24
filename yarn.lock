@@ -58,10 +58,10 @@
   dependencies:
     any-observable "^0.3.0"
 
-"@techtrain/cli-railway@^0.1.0-alpha.1":
-  version "0.1.0-alpha.1"
-  resolved "https://registry.yarnpkg.com/@techtrain/cli-railway/-/cli-railway-0.1.0-alpha.1.tgz#e00920148559814089417a933f4e5ab2c5e5e558"
-  integrity sha512-/RNxja0fsGNPFk+h6t2yDDKtRpkxcvwhJsqYM3EVfSWR/hHZDnVIrSAuGKe3mMMaBctr5ZjLWVVwI490K2A/9A==
+"@techtrain/cli-railway@^0.1.0-alpha.5":
+  version "0.1.0-alpha.5"
+  resolved "https://registry.yarnpkg.com/@techtrain/cli-railway/-/cli-railway-0.1.0-alpha.5.tgz#09ba9c970a27da95fb5593552d402101561265f1"
+  integrity sha512-5X99cZ4wqvri62h3EvplXrjEUF8sqv8Fc5uIBLMToz0+XkuPpGVJ/7yBjOZ10AZ01akXmMWO/oeWteTIQqU1QA==
 
 "@types/node@12.12.50":
   version "12.12.50"
@@ -1962,6 +1962,11 @@ portscanner@2.1.1:
   dependencies:
     async "1.5.2"
     is-number-like "^1.0.3"
+
+prettier@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.2.1.tgz#795a1a78dd52f073da0cd42b21f9c91381923ff5"
+  integrity sha512-PqyhM2yCjg/oKkFPtTGUojv7gnZAoG80ttl45O6x2Ug/rMJw4wcc9k6aaf2hibP7BGVCCM33gZoGjyvt9mm16Q==
 
 pretty-bytes@^5.4.1:
   version "5.6.0"
