@@ -39,6 +39,7 @@ https://brew.sh/index_ja
 
 ##### 2. Yarn のインストール
 
+Terminal.app を開き、次のコマンドをコピーアンドペーストで実行してください。
 
 `brew install yarn`
 
@@ -47,4 +48,5 @@ https://brew.sh/index_ja
 `yarn -v`
 
 を実行してください。インストール済みであれば次のような表示になるはずです。
+
 ![スクリーンショット 2021-04-25 15 44 21](https://user-images.githubusercontent.com/16362021/115983603-28745480-a5dd-11eb-9636-bdf4d77ab796.png)
