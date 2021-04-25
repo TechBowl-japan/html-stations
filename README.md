@@ -80,6 +80,19 @@ Windowsでの初期設定を行うためには、コマンドラインインタ�
 
 Windowsでは、**PowerShell**とよばれるコマンドラインインターフェイスが標準で搭載されています。
 
+PowerShellを起動するには、スタートボタン（左下にあるWindowsのロゴ）を右クリックするか、`Win-S`キーを押して以下のメニューを表示してください。
+管理者権限を必要とする場合は「Windows PowerShell (管理者)(A)」、それ以外の場合は「Windows PowerShell(I)」をクリックしましょう。
+
+![image](https://user-images.githubusercontent.com/298748/115985113-42199a00-a5e5-11eb-9f7c-85c19f73666b.png)
+
+#### PowerShellを操作する
+
+PowerShellを起動すると、以下のような画面が出てきます。
+
+![image](https://user-images.githubusercontent.com/298748/115985231-d2f07580-a5e5-11eb-9dd8-5e9751df590b.png)
+
+![image](https://user-images.githubusercontent.com/298748/115985269-0206e700-a5e6-11eb-9394-9a50ed6e9d49.png)
+
 #### Scoopを用いた環境構築（推奨）
 
 [Chocolatey](https://chocolatey.org/)など他のパッケージ管理ツールもありますが、
