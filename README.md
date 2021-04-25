@@ -74,4 +74,65 @@ Terminal.app を開き、次のコマンドをコピーアンドペーストで�
 
 ### Windowsにおける初期設定
 
+Windowsでの初期設定を行うためには、コマンドラインインターフェイス（CLI）の操作を行う必要があります。
 
+#### PowerShellの起動方法
+
+Windowsでは、**PowerShell**とよばれるコマンドラインインターフェイスが標準で搭載されています。
+
+#### Scoopを用いた環境構築（推奨）
+
+[Chocolatey](https://chocolatey.org/)など他のパッケージ管理ツールもありますが、
+[Scoop](https://scoop.sh/)を用いた環境構築を推奨します。
+
+Scoopをインストールするには、PowerShellを**管理者権限**で起動し、以下のコマンドを入力します：
+
+```powershell
+iwr -useb get.scoop.sh | iex
+```
+
+インストールに失敗する際は、以下のコマンドを入力してから再度上のコマンドを入力してみましょう：
+
+```powershell
+Set-ExecutionPolicy RemoteSigned -scope CurrentUser
+```
+
+これらの操作を行うためには、ユーザーアカウントに[管理者権限](https://support.microsoft.com/ja-jp/windows/63267a09-9926-991a-1c77-d203160c8563)があることが前提となります。
+
+#### Git、nodeおよびyarnのインストール
+
+Railwayを進めるには、**Git**、**node**、**yarn**のインストールが必要です。管理者権限で起動したPowerShellに以下のコマンドを入力して、Scoopを経由してインストールしましょう：
+
+```powershell
+scoop install git nodejs-lts yarn
+```
+
+#### `html-stations`リポジトリのクローン
+
+"Use this template"から作成したリポジトリを、作業するディレクトリにクローンしましょう。
+
+```powershell
+git clone https://github.com/{ユーザー名}/html-stations.git
+```
+
+#### パッケージのインストール
+
+クローンしたばかりのリポジトリは歯抜けの状態なので、必要なファイルをダウンロードする必要があります。`yarn install`コマンドで自動化されているので、これを実行します。
+10分程度掛かることもあるため、気長に待ちましょう。
+
+```powershell
+cd html-stations
+yarn install
+```
+
+#### Gitフックのセットアップ
+
+```powershell
+yarn hook:update
+```
+
+#### TechTrainへのログイン
+
+```powershell
+yarn login:techtrain
+```
