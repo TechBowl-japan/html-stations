@@ -6,6 +6,7 @@
 .card__img-top {
   width: 288px;
   height: 182px;
+  margin-bottom: 10px;
 }
 
 .card__title {
@@ -14,6 +15,6 @@
 }
 
 .card__description {
-  color: #808080;
+  color: #282828;
   font-size: 12px;
 }
