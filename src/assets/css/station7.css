@@ -29,6 +29,12 @@ nav {
   background-color: #726666;
 }
 
+.card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .card {
   width: 304px;
   height: 286px;
