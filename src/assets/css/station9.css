@@ -55,14 +55,14 @@ nav {
 
 .card__description {
   display: none;
-  font-size: 12px;
+  font-size: 10px;
   color: #282828;
 }
 
 @media screen and (min-width: 768px) {
   .card__description {
     display: block;
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .card__title {
@@ -72,7 +72,7 @@ nav {
 
 @media screen and (min-width: 1200px) {
   .card__description {
-    font-size: 10px;
+    font-size: 14px;
   }
 
   .card__title {
