@@ -11,6 +11,7 @@ p {
 .card {
   width: 304px;
   height: 286px;
+  background-color: #ffffff;
   padding: 8px 8px 12px;
 }
 
@@ -27,5 +28,5 @@ p {
 
 .card__description {
   font-size: 12px;
-  color: #808080;
+  color: #282828;
 }
