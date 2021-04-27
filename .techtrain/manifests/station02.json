@@ -1,9 +1,7 @@
 {
   "name": "Station 02",
   "id": 2,
-  "prepare": [
-    "yarn install"
-  ],
+  "prepare": [],
   "tests": [
     {
       "type": "command",
