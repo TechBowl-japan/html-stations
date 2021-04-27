@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
-    "@techtrain/cli-railway": "^0.1.0-alpha.7",
+    "@techtrain/cli-railway": "^0.1.0-alpha.8",
     "cypress": "^6.6.0",
     "fp-ts": "^2.9.5",
     "htmlhint": "^0.14.2",
