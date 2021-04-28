@@ -58,10 +58,10 @@
   dependencies:
     any-observable "^0.3.0"
 
-"@techtrain/cli-railway@^0.1.0-alpha.6":
-  version "0.1.0-alpha.6"
-  resolved "https://registry.yarnpkg.com/@techtrain/cli-railway/-/cli-railway-0.1.0-alpha.6.tgz#1eb50c3012bef5bac4e52a9f07583ea5e6d224ee"
-  integrity sha512-m9UWx5iv2lPpATaFSdYiBpE0RBdH73g0evPsrGW+PZ/vAKTJTQxz0PlowBKoIaLznblsTxnTxtQT+5FlEaZEnQ==
+"@techtrain/cli-railway@^0.1.0-alpha.8":
+  version "0.1.0-alpha.8"
+  resolved "https://registry.yarnpkg.com/@techtrain/cli-railway/-/cli-railway-0.1.0-alpha.8.tgz#911477236a311bb99aa7372e94088270c7a7de8b"
+  integrity sha512-GZn0molXQ4AZlqHBkM1wm8EvO+j8raN3kR/vGN/feldfQuhV3tGa5aCpOXdSR0qlA+nQ0H0nMCROmEzUHvUzBA==
 
 "@types/node@12.12.50":
   version "12.12.50"

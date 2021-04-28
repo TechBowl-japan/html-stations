@@ -6,7 +6,7 @@
     {
       "type": "command",
       "title": "異なるブラウザで見た目が一致しているかを確認（自己申告）",
-      "command": "true",
+      "command": "echo",
       "args": []
     }
   ]
