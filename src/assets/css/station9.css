@@ -23,6 +23,7 @@ img {
 .card {
   background-color:  #fff;
   padding: 10px;
+  margin-bottom: 10px;
 }
 
 .card__title {
@@ -37,7 +38,7 @@ img {
 
 .card-container {
   display:flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -48,6 +49,10 @@ img {
 }
 
 @media screen and (max-width: 768px) {
+  .card-container {
+    flex-wrap: wrap;
+  }
+
   .card__description {
     font-size: 10px;
   }
@@ -57,4 +62,9 @@ img {
   .card__description {
     display: none;
   }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+
+
 }
