@@ -25,5 +25,6 @@
   },
   "simple-git-hooks": {
     "pre-commit": "yarn hook:pre-commit"
-  }
+  },
+  "dependencies": {}
 }
