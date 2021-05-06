@@ -1,0 +1,63 @@
+
+header {
+    background-color:#ffffff;
+}
+
+body {
+    background-color:#C4C4C4;
+}
+
+.card {
+    background-color: #fff;
+    padding:20px;
+    height:300px;
+    width:300px;
+    margin-bottom:50px;
+    margin-left:40px;
+}
+
+.card-container {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card__img-top {
+    width:288px;
+    height:182px;
+    margin-bottom:30px;
+}
+
+.card__title {
+    color:#282828;
+    font-size:14px;
+}
+
+.card__description {
+    color:#282828;
+    font-size:12px;
+}
+
+footer {
+    background-color:#ffffff;
+}
+
+/* レスポンシブデザイン */
+
+@media screen and (max-width:  320px){
+    .card__description {
+        display: none;
+    }
+    .card__title {
+        font-size: 8px;
+    }
+}
+
+@media screen and (max-width:  768px){
+    .card__description {
+        font-size: 7px;
+    }
+    .card__title {
+        font-size: 8px;
+    }
+}
