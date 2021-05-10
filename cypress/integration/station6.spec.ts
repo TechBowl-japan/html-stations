@@ -25,7 +25,7 @@ describe('Station6', function () {
   it('有効な`<meta>`OGPタグが存在する', function () {
     cy.get('meta[property]').should('exist').then(metaTags => {
       const visitor = new OgpVisitor()
-      metaTags.each(function() {
+      metaTags.each(function () {
         const property = this.getAttribute('property') ?? ''
         const content = this.getAttribute('content') ?? ''
         visitor.visitProperty(property, content)
@@ -55,7 +55,7 @@ describe('Station6', function () {
     cy.get('meta[name="twitter:site"],meta[name="twitter:creator"]').then(cardMeta => {
       cardMeta.each((_, el) => {
         const twitterId = el.getAttribute('content')
-        expect(twitterId).satisfy((v) => /^@(\w){1,15}$/.test(v), 'the values of twitter:site and twitter:crator should be valid Twitter ID')
+        expect(twitterId).satisfy((v) => /^@(\w){1,15}$/.test(v), 'the values of twitter:site and twitter:creator should be valid Twitter ID')
       })
     })
   })
