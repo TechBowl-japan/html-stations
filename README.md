@@ -266,3 +266,13 @@ git push
 yarn install
 ```
 
+### GitHubアカウントでサインアップしたので、パスワードがないという方へ
+
+https://techbowl.co.jp/techtrain/resetpassword
+
+上記のURLより自分の登録したメールアドレスより、パスワードリセットを行うことで、パスワードを発行してください。
+
+メールアドレスがわからない場合は、ログイン後にユーザー情報の編集画面で確認してください。
+ログインしていれば、次のURLから確認できます。
+
+https://techbowl.co.jp/techtrain/mypage/profile
