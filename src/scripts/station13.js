@@ -4,7 +4,7 @@ function getData() {
 
 // Arrowという文字列を返すarrowFunctionという名前のアロー関数を追加してください
 
-const arrowFunction = () => {
-  const wordArrow = console.log( "Arrow" );
+let arrowFunction = () => {
+  const wordArrow =  "Arrow";
   return wordArrow
 }
