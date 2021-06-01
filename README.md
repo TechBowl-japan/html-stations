@@ -276,3 +276,8 @@ https://techbowl.co.jp/techtrain/resetpassword
 ログインしていれば、次のURLから確認できます。
 
 https://techbowl.co.jp/techtrain/mypage/profile
+
+### 2021/06/01 20:00以前に挑戦して、Station15で詰まっている方へ
+
+1. 問題文を修正しました
+2. テストケースの不具合に対しても対応したため、このテキストの上部にある「自分のリポジトリの状態を最新に更新」を試してみてください。
