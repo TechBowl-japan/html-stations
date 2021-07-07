@@ -23,7 +23,7 @@ yarn install
 
 Station の問題は、TechTrain の画面で確認してください。
 
-### Mac における初期設定
+# Mac における初期設定
 
 Homebrew を使ってインストールすることを想定しています。
 
@@ -91,7 +91,7 @@ yarn -v
 
 ![スクリーンショット 2021-04-25 15 44 21](https://user-images.githubusercontent.com/16362021/115983603-28745480-a5dd-11eb-9636-bdf4d77ab796.png)
 
-### Windows における初期設定
+# Windows における初期設定
 
 Windows での初期設定を行うためには、キャラクターユーザーインターフェイス（CUI）の操作を行う必要があります。
 
