@@ -190,7 +190,7 @@ scoop install git nodejs-lts yarn
 
 #### `html-stations`リポジトリのクローン
 
-"Use this template" から作成したリポジトリを作業するディレクトリにクローンしましょう。
+"Fork" から作成したリポジトリを作業するディレクトリにクローンしましょう。
 
 ```powershell
 git clone https://github.com/{ユーザー名}/html-stations.git
