@@ -4,7 +4,7 @@ Railway では Git で自分が取り組んだ内容を記録するときに、�
 テストが通れば Station クリアとなります。
 クリア後、TechTrain の画面に戻り、クリアになっているかを確認してみてください。
 
-## 初期設定
+# 初期設定
 
 ### 必要なツール
 
@@ -23,7 +23,7 @@ yarn install
 
 Station の問題は、TechTrain の画面で確認してください。
 
-### Mac における初期設定
+# Mac における初期設定
 
 Homebrew を使ってインストールすることを想定しています。
 
@@ -91,7 +91,7 @@ yarn -v
 
 ![スクリーンショット 2021-04-25 15 44 21](https://user-images.githubusercontent.com/16362021/115983603-28745480-a5dd-11eb-9636-bdf4d77ab796.png)
 
-### Windows における初期設定
+# Windows における初期設定
 
 Windows での初期設定を行うためには、キャラクターユーザーインターフェイス（CUI）の操作を行う必要があります。
 
@@ -190,7 +190,7 @@ scoop install git nodejs-lts yarn
 
 #### `html-stations`リポジトリのクローン
 
-"Use this template" から作成したリポジトリを作業するディレクトリにクローンしましょう。
+"Fork" から作成したリポジトリを作業するディレクトリにクローンしましょう。
 
 ```powershell
 git clone https://github.com/{ユーザー名}/html-stations.git
@@ -222,3 +222,62 @@ yarn login:techtrain
 ```
 
 お疲れ様でした。
+
+## 自分のリポジトリの状態を最新の TechBowl-japan/html-stations と合わせる
+
+Forkしたリポジトリは、Fork元のリポジトリの状態を自動的に反映してくれませんので、自分で更新をする必要があります。
+何かエラーが出た際には、こちらを試してみてください。
+
+### 準備
+
+```shell
+# 自分が何か変更した内容があれば、 stash した後に実行してください。
+git remote add upstream git@github.com:TechBowl-japan/html-stations.git
+git fetch upstream
+```
+
+これらのコマンドを実行後にうまくいっていれば、次のような表示が含まれています。
+
+```
+git branch -a ←このコマンドを実行
+
+* master
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/main
+  remotes/upstream/main ←こちらのような upstream という文字が含まれた表示の行があれば成功です。
+```
+
+こちらで自分のリポジトリを TechBowl-japan/html-stations の最新の状態と合わせるための準備は終了です。
+
+### 自分のリポジトリの状態を最新に更新
+
+```
+# 自分の変更の状態を stash した上で次のコマンドを実行してください。
+
+# ↓main ブランチに移動するコマンド
+git checkout main
+
+# ↓ TechBowl-japan/html-stations の最新の状態をオンラインから取得
+git fetch upstream
+
+# ↓ 最新の状態を自分のリポジトリに入れてローカルの状態も最新へ
+git merge upstream/main
+git push
+yarn install
+```
+
+### GitHubアカウントでサインアップしたので、パスワードがないという方へ
+
+https://techbowl.co.jp/techtrain/resetpassword
+
+上記のURLより自分の登録したメールアドレスより、パスワードリセットを行うことで、パスワードを発行してください。
+
+メールアドレスがわからない場合は、ログイン後にユーザー情報の編集画面で確認してください。
+ログインしていれば、次のURLから確認できます。
+
+https://techbowl.co.jp/techtrain/mypage/profile
+
+### 2021/06/01 20:00以前に挑戦して、Station15で詰まっている方へ
+
+1. 問題文を修正しました
+2. テストケースの不具合に対しても対応したため、このテキストの上部にある「自分のリポジトリの状態を最新に更新」を試してみてください。
