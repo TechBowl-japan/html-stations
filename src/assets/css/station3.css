@@ -1,12 +1,12 @@
 .card {
     background-color: #fff;
-    padding: auto;
+    padding: 8px;
 }
 
 .card__img-top{
     width: 288px;
     height: 182px;
-    margin-bottom: autogit ;
+    margin-bottom: 16px ;
 }
 
 .card__title{
