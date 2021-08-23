@@ -1,10 +1,12 @@
 body{
     background-color:#c4c4c4;
 }
-.card{
+.card-container {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.card{
     background-color: #fff;
     padding: 2px;
 }
