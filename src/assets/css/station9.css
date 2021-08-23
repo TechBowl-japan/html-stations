@@ -18,10 +18,6 @@ body{
 .card__title{
     color: #282828;
     font-size: 14px;
-    
-    @media screen and (max-width: 768px){
-        font-size: 12px;
-    }
 }
 .card__description{
     color: #282828;
@@ -32,4 +28,22 @@ body{
 }
 .footer{
     background-color: #fff;
+}
+
+@media screen and (max-width: 768px){
+    .card__title{
+        font-size: 12px;
+    }
+    .card__description{
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .card__title{
+        font-size: 12px;
+    }
+    .card__description{
+        display: none;
+    }
 }
