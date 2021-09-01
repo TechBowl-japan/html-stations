@@ -54,14 +54,24 @@
 
 
 @media screen and (max-width:768px){
-    .card__description{
+    /* .card__description{
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
-    }
+    } */
     
+
+    .card__title{
+        font-size: 10px;
+    }
 }
 
 @media screen and (max-width:320px){
-    display: none;
+    .card-container{
+        display: none;
+    }
+
+    .card__title{
+        font-size: 8px;
+    }
 }
