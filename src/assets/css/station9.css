@@ -80,7 +80,7 @@
 
     .card__description{
         font-size:6px;
-        display: block;
+        display: none;
     }
 
 }
