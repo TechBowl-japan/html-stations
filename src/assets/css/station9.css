@@ -64,14 +64,24 @@
     .card__title{
         font-size: 10px;
     }
+
+    .card__description{
+        font-size:8px;
+    }
+
 }
 
 @media screen and (max-width:320px){
     .card-container{
-        display: none;
+        display: block;
     }
 
     .card__title{
         font-size: 8px;
     }
+
+    .card__description{
+        font-size:6px;
+    }
+
 }
