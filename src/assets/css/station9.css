@@ -1,6 +1,3 @@
-
-@media screen and (max-width:1200px){
-    
 .header{
     background-color: #ffffff;
 }
@@ -18,6 +15,7 @@
 .card-container{
     display: flex;
     justify-content: center;
+    display: flex;
 }
 
 .card {
@@ -47,11 +45,20 @@
     color: #ffffff;
 }
 
-}
 
+
+
+/* タブレット → 768px（iPad） → カードの説明の文字を小さくする カードのタイトルの文字を小さくする。説明が大きすぎる場合は三点リーダーをつける。
+✅ スマホ → 320px（iPhoneSE）→ カードの説明を消してタイトルだけにする。タイトルの文字の大きさを小さくする。
+プラスアルファで別の値にも対応させたい場合は、自分で設定してみよう！ */
 
 
 @media screen and (max-width:768px){
+    .card__description{
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
     
 }
 
