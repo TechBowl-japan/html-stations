@@ -13,9 +13,10 @@
 }
 
 .card-container{
+    width: 1200px;
     display: flex;
     justify-content: center;
-    display: flex;
+
 }
 
 .card {
@@ -59,7 +60,10 @@
         white-space: nowrap;
         text-overflow: ellipsis;
     } */
-    
+    .card-container{
+        max-width: 768px;
+        flex-wrap: wrap;
+    }
 
     .card__title{
         font-size: 10px;
@@ -73,6 +77,10 @@
 
 @media screen and (max-width:320px){
 
+    .card-container{
+        max-width: 320px;
+        flex-wrap: wrap;
+    }
 
     .card__title{
         font-size: 8px;
