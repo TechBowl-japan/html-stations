@@ -72,9 +72,7 @@
 }
 
 @media screen and (max-width:320px){
-    .card-container{
-        display: block;
-    }
+
 
     .card__title{
         font-size: 8px;
@@ -82,6 +80,7 @@
 
     .card__description{
         font-size:6px;
+        display: block;
     }
 
 }
