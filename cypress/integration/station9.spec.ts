@@ -45,12 +45,6 @@ describe('Station9', () => {
       const fontSizeMedium = parseFloat(title.css('font-size'))
       expect(fontSizeMedium).lt(fontSize)
     })
-
-    cy.viewport(320, 1000)
-    cy.get('.card__description').then((title) => {
-      const fontSizeSmall = parseFloat(title.css('font-size'))
-      expect(fontSizeSmall).lt(fontSize)
-    })
   })
 
   it('スマートフォンで説明の文字が非表示になる', () => {
