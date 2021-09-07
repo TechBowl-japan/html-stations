@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0460d1c2-7ed0-4097-b7e5-32dcb3a2b0f4" name="デフォルト変更リスト" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/css/station4.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/station4.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/station4.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/station4.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +93,7 @@
       <option name="presentableId" value="Default" />
       <updated>1631008907819</updated>
       <workItem from="1631008909055" duration="4910000" />
-      <workItem from="1631015810955" duration="293000" />
+      <workItem from="1631015810955" duration="593000" />
     </task>
     <servers />
   </component>

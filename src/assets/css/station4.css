@@ -2,6 +2,18 @@ header {
     background-color: #ffffff;
 }
 
+footer {
+    background-color: #ffffff;
+}
+
+body {
+    background-color: #C4C4C4;
+}
+
+nav {
+    background-color: #726666;
+}
+
 .card {
     background-color: #fff;
     padding: 10px;
