@@ -1,4 +1,22 @@
-function getData() {
-    // Arrowという文字列を返す処理をアロー関数を入れて書きましょう。
-    return // ここにアロー関数の処理を書く
+data = "grobal data";
+
+// このreturnDataに代入される関数の形をアロー関数に変えて"grobal data"が表示されるようにしてください
+// 関数の中の処理は変更しないでください
+const returnThisData = function(){
+    return this.data;
 }
+
+const object = {
+  data: "object data",
+  func: returnThisData,
+};
+
+function getData() {
+  return object.func();
+}
+
+
+//正解:
+// const returnData = () => {
+//     return this.data;
+//   }
