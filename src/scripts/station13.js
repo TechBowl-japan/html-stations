@@ -4,7 +4,7 @@ data = "global data";
 // ↓関数の中の処理は変更しないでください
 const returnThisData = function () {
   return this.data;
-}
+};
 // ↑関数の中の処理は変更しないでください
 
 const object = {
