@@ -9,7 +9,7 @@ describe('Station13', () => {
 
   it('Arrowの文言が表示される', () => {
     cy.get('#result').then((result) => {
-      expect(result[0].innerHTML).eq("Arrow")
+      expect(result[0].innerHTML).eq("global data")
     })
   })
 })
