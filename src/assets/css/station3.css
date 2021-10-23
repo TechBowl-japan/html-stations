@@ -1,9 +1,6 @@
-body {
-  background-color: #fff;
-}
-
 .card{
   padding: 15px;
+  background-color: #fff;
 }
 
 img.card__img-top{
