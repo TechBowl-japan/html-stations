@@ -1,6 +1,6 @@
 // const { values } = require("fp-ts/lib/Map");
-const { some } = require("fp-ts/lib/ReadonlyRecord");
-const { textSpanContainsPosition } = require("typescript");
+// const { some } = require("fp-ts/lib/ReadonlyRecord");
+// const { textSpanContainsPosition } = require("typescript");
 
 async function getData() {
   // Promiseを使った実装をやってみましょう！APIとの通信でよく使う表現になります！
