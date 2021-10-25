@@ -1,4 +1,4 @@
-const { array } = require("fp-ts");
+// const { array } = require("fp-ts");
 
 function getData() {
     // これから作ろうとしているもので、JavaScriptでフルネームを生成する必要が出てきました。
