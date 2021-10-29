@@ -7,6 +7,7 @@ img{
     margin-bottom:10px;
 }
 .card{
+    background-color:#fff;
     padding:1em;
 }
 .card__title{
