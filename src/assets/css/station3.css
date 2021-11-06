@@ -13,8 +13,11 @@ p {
 img {
   width: 288px;
   height: 182px;
-  margin-bottom: auto;
+  
 }
-.card__description {
-  padding: 0.1px;
+.card__img-top {
+  margin-bottom: 1px;
+}
+.card {
+  padding: 1px;
 }
