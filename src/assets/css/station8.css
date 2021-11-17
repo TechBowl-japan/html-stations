@@ -14,10 +14,13 @@ footer {
   background-color: #fff;
 }
 
+div.card-container {
+  display: flex;
+}
+
 div.card {
   background-color: #fff;
   padding: 8px;
-  display: flex;
   justify-content: center;
   align-items: center;
 }
