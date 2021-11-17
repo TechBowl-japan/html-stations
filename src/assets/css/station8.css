@@ -20,7 +20,9 @@ div.card-container {
 
 div.card {
   background-color: #fff;
+  width: 300px;
   padding: 8px;
+  margin: 8px;
   justify-content: center;
   align-items: center;
 }
