@@ -10,11 +10,12 @@ header{
     background-color:#ffffff;
 }
 
-.main{
+.card-container{
+    display: flex;
     justify-content: center;
     align-items: center;
-    display: flex;
-    background-color:#ffffff;
+    list-style-type: none;
+    flex-wrap: wrap;
 }
 
 .card{
