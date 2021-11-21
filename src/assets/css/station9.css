@@ -52,7 +52,7 @@ header{
 @media screen and (max-width: 768px){　　
     .card__title{
       color: #282828;
-      font-size: 10px;
+      font-size: 5px;
     }
     .card__description{
       font-size: 5px;
@@ -63,7 +63,7 @@ header{
   @media screen and (max-width: 320px){　　
     .card__title{
       color: #282828;
-      font-size: 10px;
+      font-size: 5px;
     }
     .card__description{
       display:none;
