@@ -3,7 +3,11 @@ body{
 }
 
 @media screen and (min-width:320px) { 
-  .card__title{
+    body{
+        display:block;
+    }
+  
+    .card__title{
     font-size: 8px;
     }
 }
