@@ -51,7 +51,7 @@ header{
 /* iPad */
 @media screen and (max-width: 768px){　　
     .card__title{
-      font-size: 14px;
+      font-size: 12px;
     }
     .card__description{
       font-size: 5px;
@@ -61,7 +61,7 @@ header{
   /* smartphone */
   @media screen and (max-width: 320px){　　
     .card__title{
-      font-size: 14px;
+      font-size: 12px;
     }
     .card__description{
       display:none;
