@@ -56,14 +56,14 @@ header{
     }
 
   .card__description{
-        font-size: 5px;
+        font-size: 8px;
     }
 }
 
 /* smartphone */
 @media screen and (min-width:320px) { 
     .card__title{
-        font-size: 8px; 
+        font-size: 5px; 
         }
     
       .card__description{
