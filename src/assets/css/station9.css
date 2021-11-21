@@ -56,17 +56,17 @@ header{
     }
 
   .card__description{
-        font-size: 8px;
+        font-size: 5px;
     }
 }
 
 /* smartphone */
 @media screen and (min-width:320px) { 
     .card__title{
-        font-size: 5px; 
+        font-size: 8px; 
         }
     
       .card__description{
-        display:block;
+        display:none;
         }
 }
