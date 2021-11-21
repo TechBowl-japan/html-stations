@@ -2,26 +2,6 @@ body{
     background-color:#ffffff;
 }
 
-@media screen and (min-width:320px) { 
-    body{
-        display:block;
-    }
-  
-    .card__title{
-    font-size: 8px;
-    }
-}
-@media screen and (min-width:768px) {
-  .card__title{
-    font-size: 8px;
-    }
- 
-}
-@media screen and (min-width:1200px) {
-    /*　for PC　*/
- 
-}
-
 header{
     background-color:#ffffff;
 }
@@ -66,4 +46,27 @@ header{
     color: #282828;
     font-size: 12px;
     width:289px;
+}
+
+/* iPad */
+@media screen and (min-width:768px) {
+  .card__title{
+    font-size: 8px;
+    
+    }
+
+  .card__description{
+        font-size: 5px;
+    }
+}
+
+/* smartphone */
+@media screen and (min-width:320px) { 
+    .card__title{
+        font-size: 8px; 
+        }
+    
+      .card__description{
+        display:block;
+        }
 }
