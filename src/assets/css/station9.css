@@ -51,8 +51,7 @@ header{
 /* iPad */
 @media screen and (max-width: 768px){　　
     .card__title{
-      color: #282828;
-      font-size: 5px;
+      font-size: 14px;
     }
     .card__description{
       font-size: 5px;
@@ -62,8 +61,7 @@ header{
   /* smartphone */
   @media screen and (max-width: 320px){　　
     .card__title{
-      color: #282828;
-      font-size: 5px;
+      font-size: 14px;
     }
     .card__description{
       display:none;
