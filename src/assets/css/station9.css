@@ -1,16 +1,16 @@
-body{
-    background-color:#ffffff;
+body {
+    background-color: #ffffff;
 }
 
-header{
-    background-color:#ffffff;
+header {
+    background-color: #ffffff;
 }
 
-.nav{
-    background-color:#ffffff;
+.nav {
+    background-color: #ffffff;
 }
 
-.card-container{
+.card-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,52 +18,54 @@ header{
     flex-wrap: wrap;
 }
 
-.card{
-    float:left;
+.card {
+    float: left;
     padding: 60px;
 }
 
-.card__img-top{
-    width:288px;
+.card__img-top {
+    width: 288px;
     height: 182px;
-    margin-bottom:-10px;
-    
+    margin-bottom: -10px;
 }
 
-
-.card__title{
-    margin-bottom:30px;
+.card__title {
+    margin-bottom: 30px;
     font-weight: bold;
     text-align: center;
     color: #282828;
     font-size: 16px;
-    width:400px;
+    width: 400px;
     height: 26px;
-    margin-left:-130px;
+    margin-left: -130px;
 }
 
-.card__description{
+.card__description {
     color: #282828;
     font-size: 12px;
-    width:289px;
+    width: 289px;
 }
 
-/* iPad */
-@media screen and (max-width: 768px){　　
-    .card__title{
-      font-size: 10px;
-    }
-    .card__description{
-      font-size: 5px;
-    }
-  }
 
-  /* smartphone */
-  @media screen and (max-width: 320px){　　
-    .card__title{
-      font-size: 10px;
+/* iPad */
+
+@media screen and (max-width: 768px) {
+    .card__title {
+        font-size: 6px;
     }
-    .card__description{
-      display:none;
+    .card__description {
+        font-size: 5px;
     }
-  }
+}
+
+
+/* smartphone */
+
+@media screen and (max-width: 320px) {
+    .card__title {
+        font-size: 6px;
+    }
+    .card__description {
+        display: none;
+    }
+}
