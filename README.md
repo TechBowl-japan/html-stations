@@ -32,7 +32,7 @@ Homebrew を使ってインストールすることを想定しています。
 Terminal.app を開き、次のコマンドをコピーアンドペーストで実行してください。
 
 ```shell
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
 すでにインストール済みの方は、この手順を飛ばしてください。
