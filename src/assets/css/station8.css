@@ -1,0 +1,43 @@
+header {
+  height: 50px;
+  background-color: #ffffff;
+}
+body {
+  margin: 0px;
+  background-color: #c4c4c4;
+}
+footer {
+  height: 50px;
+  background-color: #ffffff;
+}
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 150px;
+  padding: 50px 100px;
+  height: 100vh;
+}
+.card {
+  width: 300px;
+  height: 300px;
+  margin: 0;
+  padding: 14px;
+  background-color: #fff;
+}
+.card__img-top {
+  width: 288px;
+  height: 182px;
+  margin-bottom: 14px;
+}
+.card__title {
+  margin: 0px;
+  color: #282828;
+  font-size: 14px;
+}
+.card__description {
+  margin: 0px;
+  color: #282828;
+  font-size: 12px;
+}
