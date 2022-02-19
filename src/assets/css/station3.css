@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+.card {
+    background-color: #fff;
+    padding: 15px;
+}
+
+.card__title {
+    color: #282828;
+    font-size: 14px;
+}
+
+.card__description {
+    color: #282828;
+    font-size: 12px;
+}
+
+.card__img-top {
+    width: 288;
+    height: 182;
+    margin-bottom: 10px;
+}
