@@ -17,14 +17,14 @@ img {
       padding:10px;
   }
   header {
-    color:#ffffff;
+    background-color:#ffffff;
   }
   body {
-      color:#C4C4C4;
+    background-color:#C4C4C4;
   }
   nav {
-      color:#726666;
+    background-color:#726666;
   }
   footer {
-    color:#ffffff
+    background-color:#ffffff
   }
