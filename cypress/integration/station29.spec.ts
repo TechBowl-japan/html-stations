@@ -9,11 +9,11 @@ describe('station29', () => {
   })
 
   it('最初はリストで表示されていない', () => {
-    cy.get('#fuits').children('p').should('be.visible')
+    cy.get('#fruits').children('p').should('be.visible')
   })
 
   it('ボタンをクリックするとリスト表示される', () => {
-    cy.get('[type="button"]').click()
-    cy.get('#fuits > ul > li').should('be.visible')
+    cy.get('button').click()
+    cy.get('#fruits > ul > li').should('be.visible')
   })
 })
