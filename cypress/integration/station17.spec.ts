@@ -9,7 +9,7 @@ describe('Station17', () => {
   })
 
   it('レイアウトがGridlayoutになっている', () => {
-    cy.get('body').should('have.css', 'display', 'grid')
+    cy.get('#container').should('have.css', 'display', 'grid')
   })
 
   it('ヘッダーが指定の位置にある', () => {
