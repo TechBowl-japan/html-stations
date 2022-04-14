@@ -10,7 +10,9 @@ describe('Station21', () => {
 
   it('<p>にレスポンス内容をコピペできている', () => {
     cy.get('p').then((p) => {
-      const responseJson = JSON.parse(p[0].innerHTML)
+      const responseJson: { message: string; status: string } = JSON.parse(
+        p[0].innerHTML
+      )
       expect(responseJson.message).to.be.exist
       expect(responseJson.status).to.be.exist
     })
