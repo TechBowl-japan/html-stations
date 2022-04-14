@@ -2,9 +2,9 @@
  * # スプレッド構文を使ってみよう！
  */
 
-describe('Station11', () => {
+describe('Station22', () => {
   beforeEach(() => {
-    cy.visit('/station11.html')
+    cy.visit('/station22.html')
   })
 
   it('文言が表示される', () => {
