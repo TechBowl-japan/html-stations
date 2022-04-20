@@ -1,5 +1,5 @@
 /**
- * # スプレッド構文を使ってみよう！
+ * # 「リストを作ろう！」 - HTML List
  */
 
 describe('Station11', () => {
@@ -7,9 +7,13 @@ describe('Station11', () => {
     cy.visit('/station11.html')
   })
 
-  it('文言が表示される', () => {
-    cy.get('#result').then((result) => {
-      expect(result[0].innerHTML).eq("abcdefghijklmn")
-    })
+  it('<ul>が存在する', () => {
+    cy.get('ul').should('be.visible')
+  })
+
+  it('<li>で囲われた「りんご」、「ばなな」、「どりあん」がそれぞれ表示されている', () => {
+    cy.get('ul > li').contains('りんご').should('be.visible')
+    cy.get('ul > li').contains('ばなな').should('be.visible')
+    cy.get('ul > li').contains('ぶどう').should('be.visible')
   })
 })
