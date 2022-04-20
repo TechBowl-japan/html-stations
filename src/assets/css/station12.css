@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+body {
+  position: relative;
+}
+
+#red {
+  width: 300px;
+  height: 300px;
+  background-color: #ff6666;
+  position: absolute;
+}
+
+#blue {
+  width: 300px;
+  height: 300px;
+  background-color: #0000ff;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+}
