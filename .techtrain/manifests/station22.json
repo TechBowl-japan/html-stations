@@ -1,0 +1,16 @@
+{
+  "name": "Station22",
+  "id": 22,
+  "prepare": [
+    {
+      "command": "yarn lite-server",
+      "backgrond": true
+    }
+  ],
+  "tests": [
+    {
+      "type": "cypress",
+      "specFile": "./cypress/integration/station22.spec.ts"
+    }
+  ]
+}
