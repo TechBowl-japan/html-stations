@@ -25,5 +25,8 @@
   },
   "simple-git-hooks": {
     "pre-commit": "yarn hook:pre-commit"
+  },
+  "dependencies": {
+    "cypress-real-events": "^1.7.0"
   }
 }
