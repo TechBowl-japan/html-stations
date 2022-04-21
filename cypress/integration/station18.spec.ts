@@ -16,6 +16,9 @@ describe('Station18', () => {
   })
 
   it('アニメーションが終わった後も要素が表示されている', () => {
-    cy.get('#animation').should('have.css', 'animation-fill-mode', 'forwards')
+    cy.get('#animation').then((animation) => {
+      expect(animation.css('animation-fill-mode')).not.to.be.eq('none')
+      expect(animation.css('animation-fill-mode')).not.to.be.eq('backwards')
+    })
   })
 })
