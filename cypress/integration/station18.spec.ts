@@ -10,8 +10,8 @@ describe('Station18', () => {
   it('開いたときにアニメーションが走る', () => {
     cy.get('#animation').then((animation) => {
       const duration = Number(animation.css('animation-duration').slice(0, -1))
-      expect(animation.css('animation-name')).not.to.be.eq('none')
       expect(duration).to.be.greaterThan(0)
+      expect(animation.css('animation-name')).not.to.be.eq('none')
     })
   })
 
