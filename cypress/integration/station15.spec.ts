@@ -1,26 +1,19 @@
 /**
- * # 「Promiseを使ってみよう！」 - Promise
+ * # 「標準仕様について知ろう！」 - WHATWG Living Standard, W3C Spec
  */
 
 describe('Station15', () => {
   beforeEach(() => {
-    cy.clock()
     cy.visit('/station15.html')
   })
 
-  it('最初は何も表示されない', () => {
-    cy.get('#result').then((result) => {
-      expect(result.children().length).eq(0)
-    })
+  it('<article>, <section>が正しく使われている', () => {
+    cy.get('body > article').should('be.visible')
+    cy.get('article > section').should('be.visible')
   })
 
-  it('3秒後フルネームのリストが表示される', () => {
-    cy.tick(3000)
-    cy.wait(0)
-
-    cy.get('#result').then((result) => {
-      expect(result.children()[0].innerHTML).eq("大木 優")
-      expect(result.children()[1].innerHTML).eq("山田 太郎")
-    })
+  it('<section>にwidth: 600px, margin-bottom: 50pxが適用されている', () => {
+    cy.get('section').should('have.css', 'width', '600px')
+    cy.get('section').should('have.css', 'margin-bottom', '50px')
   })
 })
