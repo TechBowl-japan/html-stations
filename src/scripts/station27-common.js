@@ -1,2 +1,2 @@
 const check = document.getElementById("check");
-check.addEventListener("change", changeBackgroundColor);
+check.addEventListener("change", (e) => changeBackgroundColor(e));
