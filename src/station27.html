@@ -5,13 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Station 27</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/JNKKKK/MoreToggles.css@0.2.1/output/moretoggles.min.css">
     <script type="text/javascript" src="./scripts/station27.js"></script>
   </head>
   <body>
     <main>
       <p id="text">背景色が変わります。</p>
-      <button id="blue" onclick="changeBackgroundColor('blue')">青色</button>
-      <button id="red" onclick="changeBackgroundColor('red')">赤色</button>
+      <div class="mt-ios">
+        <input id="check" type="checkbox" />
+        <label for="check"></label>
+      </div>
     </main>
+    <script type="text/javascript" src="./scripts/station27-common.js"></script>
   </body>
 </html>
