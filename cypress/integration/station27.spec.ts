@@ -1,6 +1,8 @@
 /**
  * # 「if文を使えるようになろう！」 - if
- */ import { compareColor } from '../utils/compareColor'
+ */
+
+import { compareColor } from '../utils/compareColor'
 
 describe('station27', () => {
   beforeEach(() => {
