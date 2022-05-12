@@ -1,16 +1,13 @@
 {
   "name": "Station 14",
   "id": 14,
-  "prepare": [
-    {
-      "command": "yarn lite-server",
-      "background": true
-    }
-  ],
+  "prepare": [],
   "tests": [
     {
-      "type": "cypress",
-      "specFile": "./cypress/integration/station14.spec.ts"
+      "type": "command",
+      "title": "ローカルサーバでhtmlをブラウザから確認（自己申告）",
+      "command": "echo",
+      "args": []
     }
   ]
 }
