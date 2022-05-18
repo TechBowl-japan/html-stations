@@ -1,32 +1,26 @@
 /**
- * # 「if文を使えるようになろう！」 - if
+ * # 「Promiseを使ってみよう！」 - Promise
  */
 
-import { compareColor } from '../utils/compareColor'
-
-describe('station27', () => {
+describe('Station27', () => {
   beforeEach(() => {
+    cy.clock()
     cy.visit('/station27.html')
   })
 
-  it('トグルボタンがONのときテキストの背景色が赤色になる', () => {
-    cy.get('#check')
-      .check({ force: true })
-      .then(() => {
-        cy.get('p#text').then((text) => {
-          expect(compareColor(text.css('background-color'), '#ff0000')).to.be
-            .true
-        })
-      })
+  it('最初は何も表示されない', () => {
+    cy.get('#result').then((result) => {
+      expect(result.children().length).eq(0)
+    })
   })
 
-  it('トグルボタンがOFFのときテキストの背景色が無色になる', () => {
-    cy.get('#check')
-      .uncheck({ force: true })
-      .then(() => {
-        cy.get('p#text').then((text) => {
-          expect(compareColor(text.css('background-color'), '')).to.be.true
-        })
-      })
+  it('3秒後フルネームのリストが表示される', () => {
+    cy.tick(3000)
+    cy.wait(0)
+
+    cy.get('#result').then((result) => {
+      expect(result.children()[0].innerHTML).eq("大木 優")
+      expect(result.children()[1].innerHTML).eq("山田 太郎")
+    })
   })
 })

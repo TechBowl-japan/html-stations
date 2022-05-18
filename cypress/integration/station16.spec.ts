@@ -1,19 +1,19 @@
 /**
- * # 「ホバー時のスタイルを適用させよう！」 - Hover style
+ * # 「標準仕様について知ろう！」 - WHATWG Living Standard, W3C Spec
  */
-
-import { compareColor } from '../utils/compareColor'
 
 describe('Station16', () => {
   beforeEach(() => {
     cy.visit('/station16.html')
   })
 
-  it('<a>のhover時の文字の色が`#008000`になっている', () => {
-    cy.get('a')
-      .realHover()
-      .then((a) => {
-        expect(compareColor(a.css('color'), '#008000')).to.be.true
-      })
+  it('<article>, <section>が正しく使われている', () => {
+    cy.get('body > article').should('be.visible')
+    cy.get('article > section').should('be.visible')
+  })
+
+  it('<section>にwidth: 600px, margin-bottom: 50pxが適用されている', () => {
+    cy.get('section').should('have.css', 'width', '600px')
+    cy.get('section').should('have.css', 'margin-bottom', '50px')
   })
 })

@@ -1,20 +1,32 @@
 /**
- * # 「ECMAScriptについて知ろう！」 - ECMAScript
+ * # 「if文を使えるようになろう！」 - if
  */
+
+import { compareColor } from '../utils/compareColor'
 
 describe('station28', () => {
   beforeEach(() => {
-    cy.visit('./station28.html')
+    cy.visit('/station28.html')
   })
 
-  it('ページを開いたときにアラートが表示される', () => {
-    const stub = cy.stub()
-    cy.on('window:alert', stub)
-
-    cy.get('button')
-      .click()
+  it('トグルボタンがONのときテキストの背景色が赤色になる', () => {
+    cy.get('#check')
+      .check({ force: true })
       .then(() => {
-        expect(stub.getCall(0)).to.be.calledWith('ECMAScript')
+        cy.get('p#text').then((text) => {
+          expect(compareColor(text.css('background-color'), '#ff0000')).to.be
+            .true
+        })
+      })
+  })
+
+  it('トグルボタンがOFFのときテキストの背景色が無色になる', () => {
+    cy.get('#check')
+      .uncheck({ force: true })
+      .then(() => {
+        cy.get('p#text').then((text) => {
+          expect(compareColor(text.css('background-color'), '')).to.be.true
+        })
       })
   })
 })
