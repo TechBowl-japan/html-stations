@@ -1,5 +1,5 @@
 /**
- * # 「要素の重なりを扱えるようになろう！」 - position layout & other property
+ * # 「floatを使ってレイアウトを作ろう！」 - float
  */
 
 describe('Station12', () => {
@@ -7,15 +7,12 @@ describe('Station12', () => {
     cy.visit('/station12.html')
   })
 
-  it('赤色の要素が青色の要素より上になっている', () => {
-    cy.get('#red').then((red) => {
-      expect(Number(red.css('z-index'))).to.be.greaterThan(0)
-    })
+  it('#redと#blueが横並びになっている', () => {
+    cy.get('#red').should('have.css', 'float', 'left')
+    cy.get('#blue').should('have.css', 'float', 'left')
   })
 
-  it('赤色の要素が透過されている', () => {
-    cy.get('#red').then((red) => {
-      expect(Number(red.css('opacity'))).to.be.lessThan(1)
-    })
+  it('横並びになっている#redと#blueの下に#greenが表示されている', () => {
+    cy.get('#green').should('have.css', 'clear', 'both')
   })
 })

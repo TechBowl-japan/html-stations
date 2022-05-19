@@ -1,5 +1,5 @@
 /**
- * # 「ブロック要素とインライン要素の違いが分かるようになろう！」- Inline element and Block element
+ * # 「要素の重なりを扱えるようになろう！」 - position layout & other property
  */
 
 describe('Station13', () => {
@@ -7,19 +7,15 @@ describe('Station13', () => {
     cy.visit('/station13.html')
   })
 
-  it('<p>にcenterクラスが適用されている', () => {
-    cy.get('p').should('have.class', 'center')
+  it('赤色の要素が青色の要素より上になっている', () => {
+    cy.get('#red').then((red) => {
+      expect(Number(red.css('z-index'))).to.be.greaterThan(0)
+    })
   })
 
-  it('<a>にcenterクラスが適用されている', () => {
-    cy.get('a').should('have.class', 'center')
-  })
-
-  it('<div>にcenterクラスが適用されている', () => {
-    cy.get('div').should('have.class', 'center')
-  })
-
-  it('<span>にcenterクラスが適用されている', () => {
-    cy.get('span').should('have.class', 'center')
+  it('赤色の要素が透過されている', () => {
+    cy.get('#red').then((red) => {
+      expect(Number(red.css('opacity'))).to.be.lessThan(1)
+    })
   })
 })

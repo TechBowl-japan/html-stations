@@ -1,5 +1,5 @@
 /**
- * # 「モジュールのインポート/エクスポートを使えるようになろう！」 - Import/Export Statement
+ * # スプレッド構文を使ってみよう！
  */
 
 describe('Station23', () => {
@@ -7,9 +7,9 @@ describe('Station23', () => {
     cy.visit('/station23.html')
   })
 
-  it('クリアの文言が表示される', () => {
+  it('文言が表示される', () => {
     cy.get('#result').then((result) => {
-      expect(result[0].innerHTML).eq('Station23をクリア!')
+      expect(result[0].innerHTML).eq("abcdefghijklmn")
     })
   })
 })

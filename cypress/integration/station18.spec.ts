@@ -1,24 +1,54 @@
 /**
- * # 「CSSアニメーションを作ろう！」 - CSS Animation
+ * # 「Gridlayoutを使えるようになろう！」 - Gridlayout
  */
 
 describe('Station18', () => {
   beforeEach(() => {
+    cy.clock()
     cy.visit('/station18.html')
   })
 
-  it('開いたときにアニメーションが走る', () => {
-    cy.get('#animation').then((animation) => {
-      const duration = Number(animation.css('animation-duration').slice(0, -1))
-      expect(duration).to.be.greaterThan(0)
-      expect(animation.css('animation-name')).not.to.be.eq('none')
-    })
+  it('レイアウトがGridlayoutになっている', () => {
+    cy.get('#container').should('have.css', 'display', 'grid')
   })
 
-  it('アニメーションが終わった後も要素が表示されている', () => {
-    cy.get('#animation').then((animation) => {
-      expect(animation.css('animation-fill-mode')).not.to.be.eq('none')
-      expect(animation.css('animation-fill-mode')).not.to.be.eq('backwards')
-    })
+  it('ヘッダーが指定の位置にある', () => {
+    cy.get('header')
+      .should('have.css', 'grid-row', '1 / 2')
+      .and('have.css', 'grid-column', '1 / 3')
+  })
+
+  it('フッターが指定の位置にある', () => {
+    cy.get('footer')
+      .should('have.css', 'grid-row', '5 / 6')
+      .and('have.css', 'grid-column', '1 / 3')
+  })
+
+  it('アイテム1が指定の位置にある', () => {
+    cy.get('div')
+      .contains('アイテム1')
+      .should('have.css', 'grid-row', '2 / 5')
+      .and('have.css', 'grid-column', '1 / 2')
+  })
+
+  it('アイテム2が指定の位置にある', () => {
+    cy.get('div')
+      .contains('アイテム2')
+      .should('have.css', 'grid-row', '2 / 3')
+      .and('have.css', 'grid-column', '2 / 3')
+  })
+
+  it('アイテム3が指定の位置にある', () => {
+    cy.get('div')
+      .contains('アイテム3')
+      .should('have.css', 'grid-row', '3 / 4')
+      .and('have.css', 'grid-column', '2 / 3')
+  })
+
+  it('アイテム4が指定の位置にある', () => {
+    cy.get('div')
+      .contains('アイテム4')
+      .should('have.css', 'grid-row', '4 / 5')
+      .and('have.css', 'grid-column', '2 / 3')
   })
 })

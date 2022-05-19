@@ -1,19 +1,20 @@
 /**
- * # 「DOM APIを使ってみよう！」 - DOM API
+ * # 「ECMAScriptについて知ろう！」 - ECMAScript
  */
 
 describe('station29', () => {
   beforeEach(() => {
-    cy.clock()
-    cy.visit('/station29.html')
+    cy.visit('./station29.html')
   })
 
-  it('最初はリストで表示されていない', () => {
-    cy.get('#fruits').children('p').should('be.visible')
-  })
+  it('ページを開いたときにアラートが表示される', () => {
+    const stub = cy.stub()
+    cy.on('window:alert', stub)
 
-  it('ボタンをクリックするとリスト表示される', () => {
-    cy.get('button').click()
-    cy.get('#fruits > ul > li').should('be.visible')
+    cy.get('button')
+      .click()
+      .then(() => {
+        expect(stub.getCall(0)).to.be.calledWith('ECMAScript')
+      })
   })
 })

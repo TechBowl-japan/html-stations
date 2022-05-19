@@ -1,31 +1,22 @@
 /**
- * # 「バリデーションをしよう！」 - Validation check
+ * # 「SVGについて知ろう！」- SVG
  */
 
+import { compareColor } from '../utils/compareColor'
+
 describe('Station20', () => {
-  beforeEach(() => {
+  beforeEach('Station20', () => {
     cy.visit('/station20.html')
   })
 
-  it('メールアドレスの入力欄のtypeがemail,必須になっている', () => {
-    cy.get('form')
-      .find('input#email')
-      .should('have.attr', 'type', 'email')
-      .and('have.attr', 'required')
-  })
-
-  it('パスワードの入力欄のtypeがpassword, 必須, 6文字以上になっている', () => {
-    cy.get('form')
-      .find('input#password')
-      .should('have.attr', 'type', 'password')
-      .and('have.attr', 'minlength', '6')
-      .and('have.attr', 'required')
-  })
-
-  it('ニックネームの入力欄が20文字以下になっている', () => {
-    cy.get('form')
-      .find('input#nickname')
-      .should('have.attr', 'type', 'text')
-      .and('have.attr', 'maxlength', '20')
+  it('svgのfillに#008000が適用されている', () => {
+    cy.get('svg').then((svg) => {
+      cy.get('rect').then((rect) => {
+        expect(
+          compareColor(svg.css('fill'), '#008000') ||
+            compareColor(rect.css('fill'), '#008000')
+        ).to.be.true
+      })
+    })
   })
 })

@@ -1,5 +1,5 @@
 /**
- * # 「mapを使えるようになろう！」 - Map
+ * # 「アロー関数を使えるようになろう！」 - Arrow Function Expressions
  */
 
 describe('Station25', () => {
@@ -7,10 +7,9 @@ describe('Station25', () => {
     cy.visit('/station25.html')
   })
 
-  it('フルネームのリストが表示される', () => {
+  it('Arrowの文言が表示される', () => {
     cy.get('#result').then((result) => {
-      expect(result.children()[0].innerHTML).eq('大木 優')
-      expect(result.children()[1].innerHTML).eq('山田 太郎')
+      expect(result[0].innerHTML).eq('global data')
     })
   })
 })

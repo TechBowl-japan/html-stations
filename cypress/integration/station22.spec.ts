@@ -1,15 +1,20 @@
 /**
- * # スプレッド構文を使ってみよう！
+ * # 「DevToolsのNetworkパネルを使えるようになろう！」 - DevTools Network panel
  */
 
 describe('Station22', () => {
   beforeEach(() => {
+    cy.clock()
     cy.visit('/station22.html')
   })
 
-  it('文言が表示される', () => {
-    cy.get('#result').then((result) => {
-      expect(result[0].innerHTML).eq("abcdefghijklmn")
+  it('<p>にレスポンス内容をコピペできている', () => {
+    cy.get('p').then((p) => {
+      const responseJson: { message: string; status: string } = JSON.parse(
+        p[0].innerHTML
+      )
+      expect(responseJson.message).to.be.exist
+      expect(responseJson.status).to.be.exist
     })
   })
 })
