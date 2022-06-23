@@ -502,9 +502,14 @@ export class OgpVisitor {
     this.emitError({
       type: 'incomplete',
       metadata: 'og',
-      description: `incomplete OGP metadata; missing "${
-        ['title', 'type', 'image', 'url'].filter(n => !this.result[n]).join('", "')
-      }"`,
+      description: `incomplete OGP metadata; missing "${[
+        'title',
+        'type',
+        'image',
+        'url',
+      ]
+        .filter((n) => !this.result[n])
+        .join('", "')}"`,
     })
 
     return left([

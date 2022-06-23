@@ -1,6 +1,6 @@
 /**
  * Compares two colors. Requires DOM.
- * 
+ *
  * @param a A color.
  * @param b Another color.
  * @returns True when the `a` and `b` is identical.

@@ -11,7 +11,11 @@ describe('Station1', function () {
   })
 
   it('`<img>`タグに`src`属性がある', function () {
-    cy.get('img').should('have.attr', 'src', './assets/image/railway-thumbnail.png')
+    cy.get('img').should(
+      'have.attr',
+      'src',
+      './assets/image/railway-thumbnail.png'
+    )
   })
 
   it('タイトルは`<p>`タグで，`id`および`class`属性をもたない', function () {

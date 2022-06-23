@@ -9,7 +9,7 @@ describe('Station12', () => {
 
   it('クリアの文言が表示される', () => {
     cy.get('#result').then((result) => {
-      expect(result[0].innerHTML).eq("Station12をクリア!")
+      expect(result[0].innerHTML).eq('Station12をクリア!')
     })
   })
 })

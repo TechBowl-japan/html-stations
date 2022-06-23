@@ -9,7 +9,7 @@ describe('Station11', () => {
 
   it('文言が表示される', () => {
     cy.get('#result').then((result) => {
-      expect(result[0].innerHTML).eq("abcdefghijklmn")
+      expect(result[0].innerHTML).eq('abcdefghijklmn')
     })
   })
 })

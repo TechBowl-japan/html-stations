@@ -30,10 +30,12 @@ describe('Station3', () => {
     cy.get('.card__img-top').then((elm) => {
       const { width, height } = window.getComputedStyle(elm[0])
 
-      ;([
-        [width, 'width', 288],
-        [height, 'height', 182],
-      ] as [string, string, number][]).forEach(([v, name, expected]) => {
+      ;(
+        [
+          [width, 'width', 288],
+          [height, 'height', 182],
+        ] as [string, string, number][]
+      ).forEach(([v, name, expected]) => {
         expect(
           parseInt(v),
           `CSS property "${name}" of ".card__img-top" should be "${expected}px"; given "${v}"`
@@ -62,12 +64,8 @@ describe('Station3', () => {
   it('カードに`padding`が指定されている', () => {
     cy.get('.card').then((elm) => {
       const computedStyle = window.getComputedStyle(elm[0])
-      const {
-        paddingTop,
-        paddingLeft,
-        paddingBottom,
-        paddingRight,
-      } = computedStyle
+      const { paddingTop, paddingLeft, paddingBottom, paddingRight } =
+        computedStyle
 
       ;[
         [paddingTop, 'padding-top'],
@@ -75,7 +73,10 @@ describe('Station3', () => {
         [paddingBottom, 'padding-bottom'],
         [paddingRight, 'padding-right'],
       ].forEach(([v, name]) => {
-        expect(parseInt(v), `CSS property "${name}" of ".card" should be greater than zero`).to.gt(0)
+        expect(
+          parseInt(v),
+          `CSS property "${name}" of ".card" should be greater than zero`
+        ).to.gt(0)
       })
     })
   })
