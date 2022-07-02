@@ -268,14 +268,14 @@ yarn install
 
 ### GitHubアカウントでサインアップしたので、パスワードがないという方へ
 
-https://techbowl.co.jp/techtrain/resetpassword
+https://techtrain.dev/resetpassword
 
 上記のURLより自分の登録したメールアドレスより、パスワードリセットを行うことで、パスワードを発行してください。
 
 メールアドレスがわからない場合は、ログイン後にユーザー情報の編集画面で確認してください。
 ログインしていれば、次のURLから確認できます。
 
-https://techbowl.co.jp/techtrain/mypage/profile
+https://techtrain.dev/mypage/profile
 
 ### 2021/06/01 20:00以前に挑戦して、Station15で詰まっている方へ
 
