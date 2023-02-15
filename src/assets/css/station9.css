@@ -1,0 +1,55 @@
+body {
+  background-color: #C4C4C4;
+}
+.header{
+  background-color: #ffffff;
+}
+
+footer{
+  background-color: #ffffff;
+}
+
+.card__title{
+  color: #282828;
+  font-size: 14px;
+}
+
+.card__description{
+  color: #282828;
+  font-size: 12px;
+}
+
+.card__img-top{
+  width: 288px;
+  height: 182px;
+  margin-bottom: 8px;
+}
+
+.card{
+  padding: 10px 10px;
+  background-color: #ffffff;
+}
+
+.card-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width:768px) and ( max-width:1200px){
+  .card__title{
+    font-size: 10px;
+  }
+  .card__description{
+    font-size: 8px;
+  }
+}
+
+@media screen and (min-width:320px) and ( max-width:768px){
+  .card__title{
+    font-size: 8px;
+  }
+  .card__description{
+    display: none;
+  }
+}
