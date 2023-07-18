@@ -31,13 +31,10 @@ Homebrew を使ってインストールすることを想定しています。
 
 #### 1. Homebrew のインストール
 
-Terminal.app を開き、次のコマンドをコピーアンドペーストで実行してください。
-
-```shell
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
+[Homebrew](https://brew.sh/index_ja) 公式の案内にしたがってインストールしてください。
 
 すでにインストール済みの方は、この手順を飛ばしてください。
+
 インストールされたかどうかを確認するには、Terminal.app を開いて
 
 ```shell
@@ -47,10 +44,6 @@ brew -v
 を実行してください。インストール済みであれば次のような表示になるはずです。
 
 ![スクリーンショット 2021-04-25 15 42 19](https://user-images.githubusercontent.com/16362021/115983568-eba85d80-a5dc-11eb-9e1a-49462edc2d46.png)
-
-何か起こった際には次の公式サイトを確認してください。
-
-https://brew.sh/index_ja
 
 #### 2. Node.js のインストール
 
