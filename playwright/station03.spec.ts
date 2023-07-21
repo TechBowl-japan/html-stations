@@ -17,7 +17,7 @@ const getStyle = async (locator: Locator, propertyName: string) => {
 test('カードの背景色が白（`#ffffff`）である', async ({ page }) => {
   const card = await page.locator('.card')
   await expect(
-    compareColor(await getStyle(card, 'background-color'), '#ffffff')
+    compareColor(await getStyle(card, 'background-color'), '#ffffff'),
   ).toBe(true)
 })
 
@@ -32,11 +32,11 @@ test('タイトルと説明の文字が指定された色（`#282828`）であ�
 
   await expect(
     compareColor(titleColor, '#282828'),
-    `CSS property "color" of ".card__title" should be "#282828"; given "${titleColor}"`
+    `CSS property "color" of ".card__title" should be "#282828"; given "${titleColor}"`,
   ).toBe(true)
   await expect(
     compareColor(descriptionColor, '#282828'),
-    `CSS property "color" of ".card__description" should be "#282828"; given "${descriptionColor}"`
+    `CSS property "color" of ".card__description" should be "#282828"; given "${descriptionColor}"`,
   ).toBe(true)
 })
 

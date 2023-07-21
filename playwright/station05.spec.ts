@@ -2,7 +2,7 @@ import { test, Locator } from '@playwright/test'
 import { score } from 'wcag-color'
 
 const getBackgroundRecursively = async (locator: Locator) => {
-  return await locator.evaluate((elm) => {
+  return await locator.evaluate(elm => {
     let e: HTMLElement | null = elm as HTMLElement
 
     while (true) {
@@ -49,6 +49,6 @@ test('カードの背景色とタイトルのコントラスト値が十分に�
 test('`<img>`タグに必ず`alt`属性があること', async ({ page }) => {
   const img = await page.locator('img')
   await test
-    .expect(await img.evaluate((elm) => elm.hasAttribute('alt')))
+    .expect(await img.evaluate(elm => elm.hasAttribute('alt')))
     .toBe(true)
 })

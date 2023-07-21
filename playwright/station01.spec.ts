@@ -18,7 +18,7 @@ test('`<img>`タグに`src`属性がある', async ({ page }) => {
   const img = await page.locator('img')
   await expect(img).toHaveAttribute(
     'src',
-    './assets/image/railway-thumbnail.png'
+    './assets/image/railway-thumbnail.png',
   )
 })
 
@@ -27,8 +27,8 @@ test('タイトルは`<p>`タグで，`id`および`class`属性をもたない'
 }) => {
   const p = await page.locator('p:nth-of-type(1)')
 
-  const className = await p.evaluate((node) => node.className)
-  const id = await p.evaluate((node) => node.id)
+  const className = await p.evaluate(node => node.className)
+  const id = await p.evaluate(node => node.id)
 
   expect(className).toBe('')
   expect(id).toBe('')
@@ -42,6 +42,6 @@ test('サブタイトルは`<span>`または`<p>`タグで，`id`および`class
   const span = await body.locator('span')
   const p = await body.locator('p').nth(1)
   const target = (await span.count()) === 0 ? p : span
-  await expect(await target.evaluate((node) => node.id)).toBe('')
-  await expect(await target.evaluate((node) => node.className)).toBe('')
+  await expect(await target.evaluate(node => node.id)).toBe('')
+  await expect(await target.evaluate(node => node.className)).toBe('')
 })

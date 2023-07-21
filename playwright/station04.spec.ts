@@ -19,7 +19,7 @@ test('<header>タグがあり，背景が白色である', async ({ page }) => {
 
   await expect(header).toBeVisible()
   await expect(
-    compareColor(await getStyle(header, 'background-color'), '#ffffff')
+    compareColor(await getStyle(header, 'background-color'), '#ffffff'),
   ).toBe(true)
 })
 
