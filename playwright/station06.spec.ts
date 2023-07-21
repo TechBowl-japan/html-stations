@@ -16,7 +16,7 @@ test.beforeEach(async ({ page }) => {
 })
 
 test('有効な`<meta>`OGPタグが存在する', async ({ page }) => {
-  const metaTags = await page.$$('meta[property]')
+  const metaTags = await page.locator('meta[property]').all()
   const visitor = new OgpVisitor()
   for (const metaTag of metaTags) {
     const property = (await metaTag.getAttribute('property')) ?? ''
