@@ -11,6 +11,7 @@ const getStyle = async (locator: Locator, propertyName: string) => {
 
 test.beforeEach(async ({ page }) => {
   await page.goto('/station4.html')
+  test.setTimeout(5000)
 })
 
 test('<header>タグがあり，背景が白色である', async ({ page }) => {

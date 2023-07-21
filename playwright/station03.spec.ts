@@ -3,6 +3,7 @@ import { compareColor } from '../cypress/utils/compareColor'
 
 test.beforeEach(async ({ page }) => {
   await page.goto('/station3.html')
+  test.setTimeout(5000)
 })
 
 const getStyle = async (locator: Locator, propertyName: string) => {

@@ -4,6 +4,7 @@ test.beforeEach(async ({ page }) => {
   // functionの前に必ず実行される
   // baseUrlのrootへ
   await page.goto('/station1.html')
+  test.setTimeout(5000)
 })
 
 // FIXME: 機能していない
