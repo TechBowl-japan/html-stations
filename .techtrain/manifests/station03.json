@@ -4,7 +4,7 @@
   "tests": [
     {
       "type": "junit-compat",
-      "command": "yarn playwright test station3",
+      "command": "yarn playwright test station03",
       "args": [],
       "shell": true
     }
