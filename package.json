@@ -12,7 +12,6 @@
     "wcag-color": "^1.1.1"
   },
   "scripts": {
-    "cypress:run": "cypress run --config video=false",
     "station2:prettier": "prettier -c ./src/station2.html",
     "serve": "lite-server"
   }

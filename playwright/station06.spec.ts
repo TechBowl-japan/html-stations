@@ -7,7 +7,7 @@
 
 import { test, expect } from '@playwright/test'
 import { isLeft, isRight } from 'fp-ts/lib/Either'
-import { OgpVisitor } from '../cypress/utils/ogpValidator'
+import { OgpVisitor } from '../utils/ogpValidator'
 
 const cardTypes = ['summary', 'summary_large_image', 'app', 'player']
 

@@ -1,5 +1,5 @@
 import { test, expect, Locator } from '@playwright/test'
-import { compareColor } from '../cypress/utils/compareColor'
+import { compareColor } from '../utils/compareColor'
 
 const getStyle = async (locator: Locator, propertyName: string) => {
   const style = await locator.evaluate((node, propertyName) => {

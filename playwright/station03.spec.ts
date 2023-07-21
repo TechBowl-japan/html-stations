@@ -1,5 +1,5 @@
 import { test, expect, Locator } from '@playwright/test'
-import { compareColor } from '../cypress/utils/compareColor'
+import { compareColor } from '../utils/compareColor'
 
 test.beforeEach(async ({ page }) => {
   await page.goto('/station3.html')
