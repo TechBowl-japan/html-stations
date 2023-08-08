@@ -4,26 +4,15 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
-    "@techtrain/cli-railway": "^0.1.9",
-    "cypress": "^8.4.0",
-    "fp-ts": "^2.11.2",
-    "htmlhint": "^0.15.2",
+    "@playwright/test": "^1.36.1",
+    "fp-ts": "^2.16.0",
     "lite-server": "^2.6.1",
-    "prettier": "^2.4.1",
-    "simple-git-hooks": "^2.6.1",
-    "typescript": "^4.4.3",
-    "wcag-color": "^1.1.1",
-    "webpack-cli": "^4.8.0"
+    "prettier": "^3.0.0",
+    "typescript": "^5.1.6",
+    "wcag-color": "^1.1.1"
   },
   "scripts": {
-    "cypress:run": "cypress run --config video=false",
-    "login:techtrain": "techtrain-railway login",
-    "hook:pre-commit": "techtrain-railway hook:pre-commit",
-    "hook:update": "simple-git-hooks",
     "station2:prettier": "prettier -c ./src/station2.html",
-    "postinstall": "yarn hook:update && yarn login:techtrain"
-  },
-  "simple-git-hooks": {
-    "pre-commit": "yarn hook:pre-commit"
+    "serve": "lite-server"
   }
 }

@@ -9,8 +9,10 @@
   ],
   "tests": [
     {
-      "type": "cypress",
-      "specFile": "./cypress/integration/station13.spec.ts"
+      "type": "junit-compat",
+      "command": "yarn playwright test station13",
+      "args": [],
+      "shell": true
     }
   ]
 }

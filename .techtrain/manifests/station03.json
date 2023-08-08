@@ -1,16 +1,12 @@
 {
   "name": "Station 03",
   "id": 3,
-  "prepare": [
-    {
-      "command": "yarn lite-server",
-      "background": true
-    }
-  ],
   "tests": [
     {
-      "type": "cypress",
-      "specFile": "./cypress/integration/station3.spec.ts"
+      "type": "junit-compat",
+      "command": "yarn playwright test station03",
+      "args": [],
+      "shell": true
     }
   ]
 }
