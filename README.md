@@ -187,7 +187,7 @@ Railway を進めるには、**Git**、**node**、**yarn**のインストール�
 scoop install git nodejs-lts yarn
 ```
 
-#### `html-stations`リポジトリのクローン
+## `html-stations`リポジトリのクローン
 
 "Fork" から作成したリポジトリを作業するディレクトリにクローンしましょう。
 
@@ -195,7 +195,7 @@ scoop install git nodejs-lts yarn
 git clone https://github.com/{ユーザー名}/html-stations.git
 ```
 
-#### パッケージのインストール
+## パッケージのインストール
 
 クローンしたばかりのリポジトリは歯抜けの状態なので、必要なファイルをダウンロードする必要があります。
 10 分程度掛かることもあるため、気長に待ちましょう。上から順番に**１つずつ**コマンドを実行しましょう：
