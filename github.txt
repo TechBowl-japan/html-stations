@@ -1,0 +1,16 @@
+git remote -v
+
+git branch -M main
+git push -u origin main
+
+git status
+
+
+
+git checkout 【マージしたいブランチ名】
+git pull 【リモート名】 【プルリクを送りたいブランチ名】
+# 例
+git checkout branch-a
+git pull origin main
+
+branch b1
