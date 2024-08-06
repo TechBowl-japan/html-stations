@@ -22,26 +22,25 @@ test('`<img>`タグに`src`属性がある', async ({ page }) => {
   )
 })
 
-test('タイトルは`<p>`タグで，`id`および`class`属性をもたない', async ({
+test('タイトルは`<p>`タグまたは`<span>`タグで，`id`および`class`属性をもたない', async ({
   page,
 }) => {
-  const p = await page.locator('p:nth-of-type(1)')
-
-  const className = await p.evaluate(node => node.className)
-  const id = await p.evaluate(node => node.id)
-
+  const body = await page.locator('body')
+  const p = await body.locator('p').first()
+  const span = await body.locator('span').first()
+  const target = (await p.count()) === 0 ? span : p
+  const className = await target.evaluate(node => node.className)
+  const id = await target.evaluate(node => node.id)
   expect(className).toBe('')
   expect(id).toBe('')
 })
 
-// 一番目の<span>もしくは<p>の内容が`descriptionTemplate`と一致することをテストする
-test('サブタイトルは`<span>`または`<p>`タグで，`id`および`class`属性をもたない', async ({
+test('サブタイトルは`<p>`タグで，`id`および`class`属性をもたない', async ({
   page,
 }) => {
-  const body = await page.locator('body')
-  const span = await body.locator('span')
-  const p = await body.locator('p').nth(1)
-  const target = (await span.count()) === 0 ? p : span
-  await expect(await target.evaluate(node => node.id)).toBe('')
-  await expect(await target.evaluate(node => node.className)).toBe('')
+  const p = await page.locator('p').nth(1)
+  const className = await p.evaluate(node => node.className)
+  const id = await p.evaluate(node => node.id)
+  expect(className).toBe('')
+  expect(id).toBe('')
 })
