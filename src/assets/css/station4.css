@@ -1,0 +1,34 @@
+body {
+    background-color: #C4C4C4;
+}
+
+header {
+    background-color: #ffffff;
+}
+
+footer {
+    background-color: #ffffff;
+}
+
+.card {
+    width: 400px;
+    height: 300px;
+    padding: 50px;
+    background-color: #ffffff;
+}
+
+.card__title {
+    color: #282828;
+    font-size: 14px;
+}
+
+.card__description {
+    color: #282828;
+    font-size: 12px;
+}
+
+.card__img-top {
+    width: 288px;
+    height: 182px;
+    margin-bottom: 20px;
+}
