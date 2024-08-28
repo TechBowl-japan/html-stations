@@ -1,0 +1,19 @@
+{
+    "image": "mcr.microsoft.com/devcontainers/universal:2",
+    "hostRequirements": {
+      "cpus": 2
+    },
+    "waitFor": "onCreateCommand",
+    "updateContentCommand": "yarn install && yarn playwright install",
+    "postCreateCommand": "",
+    "postAttachCommand": "",
+    "customizations": {
+      "vscode":{
+        "extensions":[
+          "techtrain.railway-vscode",
+          "ms-vscode.live-server"
+        ]
+      }
+    }
+  }
+  
