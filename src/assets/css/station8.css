@@ -1,9 +1,13 @@
+.card-component {
+  display: flex;
+}
+
 .card {
-  background-color: #fde1f7;
+  background-color: #c4c4c4;
   padding: 1px;
   display: flex;
+  flex-flow: column;
   justify-content: center;
-  align-items: center;
 }
 
 .card__title {
