@@ -15,12 +15,13 @@ Chrome、Safari、Edge などのブラウザをご用意ください。（※ Fi
 
 ## ② ご自身の PC に環境構築をして進める方（すでにプログラミング学習経験があり、Git や GitHub の使い方に慣れている方におすすめ）
 
-1. Node.js（v18以降を推奨します。）
-2. Yarn (v1)
-3. Visual Studio Code
-4. Railway VSCode 拡張機能
+1. Git
+2. Node.js（v18以降を推奨します。）
+3. Yarn (v1)
+4. Visual Studio Code
+5. Railway VSCode 拡張機能
 
-上記 4 つをインストールする必要があります。インストールできているかの確認やインストール方法は、
+上記 5 つをインストールする必要があります。インストールできているかの確認やインストール方法は、
 [Railway 準備編](https://www.notion.so/techbowl/Railway-ceba695d5014460e9733c2a46318cdec) をご確認いただき、挑戦の準備をしましょう。※ GitHub Codespaces についての資料はスキップしてください。
 
 その他リポジトリの更新の仕方や、トラブルシューティングについても上記の Railway 準備編にございます。
