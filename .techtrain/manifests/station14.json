@@ -8,5 +8,10 @@
       "args": [],
       "shell": true
     }
+  ],
+  "clear_conditions": [
+    "buildFullName に実装されていること",
+    "map メソッドを使って実装されていること",
+    "「大木 優」「山田 太郎」と表示されていること"
   ]
 }

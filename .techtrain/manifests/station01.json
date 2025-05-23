@@ -8,5 +8,11 @@
       "args": [],
       "shell": true
     }
+  ],
+  "clear_conditions": [
+    "html タグが存在すること",
+    "img タグに src 属性が正しく使えていること",
+    "タイトルは p タグ、span タグを使用し、id や class を使っていないこと",
+    "サブタイトルは p タグを使用し、id や class を使っていないこと"
   ]
 }
