@@ -7,7 +7,13 @@
       "type": "command",
       "title": "Prettierのテストが通る",
       "command": "yarn",
-      "args": ["station2:prettier"]
+      "args": [
+        "station2:prettier"
+      ]
     }
+  ],
+  "clear_conditions": [
+    "インデントが整えられていること",
+    "package.json を確認し、 yarn station2:prettier を実行すること"
   ]
 }

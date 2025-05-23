@@ -8,5 +8,8 @@
       "args": [],
       "shell": true
     }
+  ],
+  "clear_conditions": [
+    ".card の親要素のレイアウトが Flexbox によって制御されていること"
   ]
 }

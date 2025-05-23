@@ -8,5 +8,10 @@
       "args": [],
       "shell": true
     }
+  ],
+  "clear_conditions": [
+    "header タグを使用していること",
+    "footer タグを利用していること",
+    "header タグの背景色が指定した色であること"
   ]
 }
