@@ -14,5 +14,9 @@
       "args": [],
       "shell": true
     }
+  ],
+  "clear_conditions": [
+    "returnThisData に代入されている関数をアロー関数に置き換えられていること",
+    "「global data」と表示されていること"
   ]
 }

@@ -8,5 +8,9 @@
       "args": [],
       "shell": true
     }
+  ],
+  "clear_conditions": [
+    "有効な meta タグの OGP の設定がなされていること",
+    "X（旧 Twitter）用に有効な meta タグの OGP の設定がなされていること"
   ]
 }

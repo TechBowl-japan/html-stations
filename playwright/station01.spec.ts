@@ -7,41 +7,45 @@ test.beforeEach(async ({ page }) => {
   test.setTimeout(5000)
 })
 
-// FIXME: 機能していない
-test('`<html>`タグが存在する', async ({ page }) => {
-  // cy.get('html').should('be.visible')
+
+test('1. html タグが存在すること', async ({ page }) => {
   const html = await page.locator('html')
-  await expect(html).toBeVisible()
+  // htmlタグが存在することを確認
+  await expect(html).toHaveCount(1);
+  // htmlタグが正常に記述してあることを確認する代わりに、attributeを確認する
+  await expect(html).toHaveAttribute('lang', 'ja');
 })
 
-test('`<img>`タグに`src`属性がある', async ({ page }) => {
+
+test('2. img タグに src 属性が正しく使えていること', async ({ page }) => {
   const img = await page.locator('img')
   await expect(img).toHaveAttribute(
     'src',
     './assets/image/railway-thumbnail.png',
-  )
+  );
 })
 
-test('タイトルは`<p>`タグで，`id`および`class`属性をもたない', async ({
+
+test('3. `TechTrainの使い方` は p タグ、span タグを使用し、id や class を使っていないこと', async ({
   page,
 }) => {
-  const p = await page.locator('p:nth-of-type(1)')
+  const titleP = await page.locator('p').filter({ hasText: 'TechTrain' });
+  const titleSpan = await titleP.locator('span');
 
-  const className = await p.evaluate(node => node.className)
-  const id = await p.evaluate(node => node.id)
+  await expect(titleP).toHaveCount(1);
+  await expect(titleSpan).toHaveCount(1);
 
-  expect(className).toBe('')
-  expect(id).toBe('')
+  await expect(await titleP.evaluate(el => !el.hasAttribute('id') && !el.hasAttribute('class'))).toBeTruthy();
+  await expect(await titleSpan.evaluate(el => !el.hasAttribute('id') && !el.hasAttribute('class'))).toBeTruthy();
 })
 
-// 一番目の<span>もしくは<p>の内容が`descriptionTemplate`と一致することをテストする
-test('サブタイトルは`<span>`または`<p>`タグで，`id`および`class`属性をもたない', async ({
+
+test('4. `Suguru Ohki` は p タグを使用し、id や class を使っていないこと', async ({
   page,
 }) => {
-  const body = await page.locator('body')
-  const span = await body.locator('span')
-  const p = await body.locator('p').nth(1)
-  const target = (await span.count()) === 0 ? p : span
-  await expect(await target.evaluate(node => node.id)).toBe('')
-  await expect(await target.evaluate(node => node.className)).toBe('')
+  const subtitleP = await page.locator('p').filter({ hasText: 'Suguru' });
+
+  await expect(subtitleP).toHaveCount(1);
+
+  await expect(await subtitleP.evaluate(el => !el.hasAttribute('id') && !el.hasAttribute('class'))).toBeTruthy();
 })

@@ -8,5 +8,10 @@
       "args": [],
       "shell": true
     }
+  ],
+  "clear_conditions": [
+    "argumentArray を含めた getData 関数の内容以外を変更していないこと",
+    "hogehoge 関数の内容が実行されていること",
+    "argumentArray の要素を連結した文字列が出力されること"
   ]
 }
